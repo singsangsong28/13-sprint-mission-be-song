@@ -65,7 +65,8 @@ const uploadImage: RequestHandler = async (req, res, next) => {
     if (!req.file) {
       throw new HttpError("이미지 파일이 필요합니다.", 400);
     }
-    return res.status(201).json({ imageUrl: `/uploads/${req.file.filename}` });
+    const { location } = req.file as Express.MulterS3.File;
+    return res.status(201).json({ imageUrl: location });
   } catch (error) {
     return next(error);
   }
