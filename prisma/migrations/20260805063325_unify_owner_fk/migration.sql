@@ -19,6 +19,6 @@ ALTER TABLE "products" DROP COLUMN "userId";
 
 -- AddForeignKey
 ALTER TABLE "products" ADD CONSTRAINT "products_owner_id_fkey" FOREIGN KEY ("owner_id") REFERENCES "users"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
-1
+
 -- AddForeignKey
 ALTER TABLE "articles" ADD CONSTRAINT "articles_owner_id_fkey" FOREIGN KEY ("owner_id") REFERENCES "users"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
