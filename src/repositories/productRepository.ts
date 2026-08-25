@@ -1,5 +1,5 @@
 import { Prisma } from "@prisma/client";
-import prisma from "../config/prisma.js";
+import prisma from "../config/prisma";
 
 interface ListOptions {
   skip?: number;

@@ -1,9 +1,9 @@
 import { Prisma } from "@prisma/client";
-import HttpError from "../errors/HttpError.js";
+import HttpError from "../errors/HttpError";
 import productRepository, {
   ProductUpdateData,
-} from "../repositories/productRepository.js";
-import { ListQuery } from "../schemas/querySchema.js";
+} from "../repositories/productRepository";
+import { ListQuery } from "../schemas/querySchema";
 
 async function getAll(
   userId: number | undefined,
